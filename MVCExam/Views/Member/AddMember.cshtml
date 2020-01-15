@@ -1,0 +1,69 @@
+﻿@model MVCExam.Models.MemberViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section MyStyle
+{
+}
+
+<title>AddMember</title>
+<div class="row">
+    @if (ViewBag.Message != null)
+    {
+        <h2 style="float:left; color:green;"><b>@ViewBag.Message</b></h2><br>
+    }
+
+    @if (ViewBag.existDuplicate != null)
+    {
+        <h2 style="float:left; color:red;"><b>@ViewBag.existDuplicate</b></h2><br>
+    }
+    @if (ViewBag.InvalidModel != null)
+    {
+        <h2 style="float:left; color:red;"><b>@ViewBag.InvalidModel</b></h2><br>
+    }
+</div>
+
+<form method="POST">
+    <div class="form-group">
+        @Html.LabelFor(c => c.Code)
+        @Html.TextBoxFor(c => c.Code, Model.Code)
+        @Html.ValidationMessageFor(c => c.Code)
+        @*<label for="Code">Code:</label>
+        <input type="text" class="form-control" id="Code" placeholder="Enter Code" name="Code">*@
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Name)
+        @Html.TextBoxFor(c => c.Name, Model.Name)
+        @Html.ValidationMessageFor(c => c.Name)
+        @*<label for="Name">Name:</label>
+        <input type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name">*@
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Email)
+        @Html.TextBoxFor(c => c.Email, Model.Email)
+        @Html.ValidationMessageFor(c => c.Email)
+        @*<label for="Email">Email:</label>
+        <input type="text" class="form-control" id="Email" placeholder="Enter Email" name="Email">*@
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.ContactNo)
+        @Html.TextBoxFor(c => c.ContactNo, Model.ContactNo)
+        @Html.ValidationMessageFor(c => c.ContactNo)
+        @*<label for="ContactNo">ContactNo:</label>
+        <input type="text" class="form-control" id="ContactNo" placeholder="Enter ContactNo" name="ContactNo">*@
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.MemberType)<br />
+        @Html.DropDownListFor(c => c.MemberTypeId, Model.MemberTypeSelectListItems, "--Select--")
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-default">
+</form>
+
+@section MyScript
+{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

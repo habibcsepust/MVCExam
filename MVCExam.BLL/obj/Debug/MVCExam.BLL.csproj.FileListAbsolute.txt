@@ -1,0 +1,17 @@
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.BLL.dll
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.BLL.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.Model.dll
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.Repository.dll
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.DatabaseContext.dll
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\EntityFramework.dll
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.Model.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.Repository.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.Repository.dll.config
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.DatabaseContext.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\MVCExam.DatabaseContext.dll.config
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\bin\Debug\EntityFramework.xml
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\obj\Debug\MVCExam.BLL.csprojAssemblyReference.cache
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\obj\Debug\MVCExam.BLL.csproj.CoreCompileInputs.cache
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\obj\Debug\MVCExam.BLL.csproj.CopyComplete
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\obj\Debug\MVCExam.BLL.dll
+G:\CSharpDotNet\MVCExam\MVCExam.BLL\obj\Debug\MVCExam.BLL.pdb

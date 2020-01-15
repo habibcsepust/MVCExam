@@ -1,0 +1,5 @@
+G:\CSharpDotNet\MVCExam\MVCExam.Model\bin\Debug\MVCExam.Model.dll
+G:\CSharpDotNet\MVCExam\MVCExam.Model\bin\Debug\MVCExam.Model.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.Model\obj\Debug\MVCExam.Model.csproj.CoreCompileInputs.cache
+G:\CSharpDotNet\MVCExam\MVCExam.Model\obj\Debug\MVCExam.Model.dll
+G:\CSharpDotNet\MVCExam\MVCExam.Model\obj\Debug\MVCExam.Model.pdb

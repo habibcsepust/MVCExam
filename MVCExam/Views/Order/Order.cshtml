@@ -1,0 +1,146 @@
+﻿@model MVCExam.Models.OrderViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section MyStyle
+{
+}
+
+<title>AddMember</title>
+<div class="row">
+    @if (ViewBag.Message != null)
+    {
+        <h2 style="float:left; color:green;"><b>@ViewBag.Message</b></h2><br>
+    }
+
+    @if (ViewBag.existDuplicate != null)
+    {
+        <h2 style="float:left; color:red;"><b>@ViewBag.existDuplicate</b></h2><br>
+    }
+    @if (ViewBag.InvalidModel != null)
+    {
+        <h2 style="float:left; color:red;"><b>@ViewBag.InvalidModel</b></h2><br>
+    }
+</div>
+
+<form method="POST">
+    <div class="form-group">
+        <h2>Code</h2>
+        @Html.DropDownList("MemberId", null, "--Select--", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" placeholder="Enter Name" name="Name">
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="text" class="form-control" id="Email" placeholder="Enter Email" name="Email">
+    </div>
+    <div class="form-group">
+        <label for="ContactNo">ContactNo:</label>
+        <input type="text" class="form-control" id="ContactNo" placeholder="Enter ContactNo" name="ContactNo">
+    </div>
+    <div class="form-group">
+        <label for="Type">Type</label>
+        <input type="text" class="form-control" id="Type" placeholder="Enter Type" name="Type">
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Food)
+        @Html.DropDownListFor(c => c.FoodId, Model.FoodItemSelectListItems, "--Select--")
+    </div>
+    <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" id="Price" placeholder="Enter Price" name="Price">
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Quantity)
+        @Html.TextBoxFor(c => c.Quantity, Model.Quantity)
+        @Html.ValidationMessageFor(c => c.Quantity)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.OrderDate)
+        @Html.TextBoxFor(c => c.OrderDate, Model.OrderDate)
+        @*@Html.ValidationMessageFor(c => c.OrderDate)*@
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-default">
+</form>
+
+@section MyScript
+{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        //Order Date
+        $(document).ready(function () {
+            $('#OrderDate').datepicker({
+                dateFormat: "dd/mm/yy",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "2000:2020",
+            });
+        });
+    </script>
+
+
+
+    @*For Select Member Details*@
+    <script>
+        $(document).ready(function () {
+            $("#MemberId").change(function () {
+                var memberId = $("#MemberId").val();
+                var jsonRequestData = { memberId: memberId }
+
+                $.ajax({
+                    url: "/Member/GetMemberDetailsByMemberId",
+                    type: "POST",
+                    data: jsonRequestData,
+                    success: function (data) {
+                        //alert("Ajax Success.");
+
+                        $.each(data, function (key, value) {
+                            $("#Name").val(value.Name);
+                            $("#Email").val(value.Email);
+                            $("#ContactNo").val(value.ContactNo);
+                            $("#Type").val(value.MemberTypeId);
+                        });
+                    },
+                    error: function () {
+                        alert("Ajax Failed For Select Member Details.");
+                    },
+                });
+            });
+        });
+    </script>
+
+
+    @*For Select Food Price*@
+    <script>
+        $(document).ready(function () {
+            $("#FoodId").change(function () {
+                var foodId = $("#FoodId").val();
+                var jsonRequestData = { foodId: foodId }
+
+                $.ajax({
+                    url: "/Member/GetFoodPriceByFoodId",
+                    type: "POST",
+                    data: jsonRequestData,
+                    success: function (data) {
+                        //alert("Ajax Success.");
+
+                        $.each(data, function (key, value) {
+                            $("#Price").val(value.Price);
+                        });
+                    },
+                    error: function () {
+                        alert("Ajax Failed For Select Member Details.");
+                    },
+                });
+            });
+        });
+    </script>
+}

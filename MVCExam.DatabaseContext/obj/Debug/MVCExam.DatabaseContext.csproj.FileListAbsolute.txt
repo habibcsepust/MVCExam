@@ -1,0 +1,16 @@
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\MVCExam.DatabaseContext.dll.config
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\MVCExam.DatabaseContext.dll
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\MVCExam.DatabaseContext.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\EntityFramework.dll
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\MVCExam.Model.dll
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\MVCExam.Model.pdb
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\EntityFramework.xml
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.csprojAssemblyReference.cache
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.Migrations.Initial.resources
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.csproj.GenerateResource.cache
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.csproj.CoreCompileInputs.cache
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.csproj.CopyComplete
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.dll
+G:\CSharpDotNet\MVCExam\MVCExam.DatabaseContext\obj\Debug\MVCExam.DatabaseContext.pdb
